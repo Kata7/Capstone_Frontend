@@ -1,12 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div id="nav" v-if="!save">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/main">Main</router-link> |
+      <router-link to="/selection">Final Selection</router-link> |
+      <router-link to="/settings">Settings</router-link>
     </div>
+    <button v-on:click='yeet'>clickme</button>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      save: false
+    }
+  },
+  methods: {
+    yeet: function (){
+      console.log('yeeet')
+    }
+  }
+}
+</script>
+
 
 <style>
 #app {

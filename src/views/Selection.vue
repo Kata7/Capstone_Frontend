@@ -1,7 +1,6 @@
 <template>
   <div class="main">
-    <h1>FOODR</h1>
-    <router-link to="/login"><button>yeet</button></router-link>
+    <p>Final CHOICE</p>
   </div>
 </template>
 
