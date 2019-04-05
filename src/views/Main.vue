@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="main">
     <div class="images">
       <p>Pictures of food go here</p>
       <img src="/#"/>
@@ -16,12 +16,30 @@ export default {
 </script>
 
 <style scoped>
-  img {
-    width: 200px;
-    height: 200px;
+  .main {
+    display: flex;
+    flex-direction: column;
+    background: #D00000;
+    /* border: 4px solid #FFFFFF; */
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
   }
 
-  .description-short {
-    border: 1px solid black;
+  .title {
+    display: flex;
+    border: 8px solid #FFBA08;
+    padding: 10px;
+    color: #FFFFFF;
+    font-size: 4rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 80%;
   }
 </style>

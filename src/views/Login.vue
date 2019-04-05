@@ -3,7 +3,7 @@
     <h1 class="title">LOGIN</h1>
     <div class="form">
       <input class="login" placeholder="email" type="text">
-      <button class="enter-btn">Enter</button>
+      <button class="enter-btn">ENTER</button>
     </div>
   </div>
 </template>
@@ -44,7 +44,11 @@ export default {
 
   .enter-btn {
     height: 2rem;
-    width: 3rem;
+    padding: 2px;
+    margin: 0px 0px 0px 1px;
+    color: #FFFFFF;
+    background: #000000;
+    border: 2px solid #FFBA08;
   }
 
   .login {
