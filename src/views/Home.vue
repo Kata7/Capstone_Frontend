@@ -1,8 +1,9 @@
 <template>
-  <div class="main">
-    <h1 class="title">FOODR</h1>
-    <!-- <router-link to="/login"><button>yeet</button></router-link> -->
-  </div>
+  <router-link to="/login">
+    <div class="main">
+      <h1 class="title">FOODR</h1>
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -10,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .main {
     display: flex;
     flex-direction: row;
@@ -18,8 +19,6 @@ export default {
     /* border: 4px solid #FFFFFF; */
     width: 100%;
     height: 100vh;
-    margin: 0px;
-    padding: 0px;
     align-items: center;
     justify-content: center;
   }
@@ -32,4 +31,7 @@ export default {
     font-size: 4rem;
   }
 
+  a {
+    text-decoration: none;
+  }
 </style>
