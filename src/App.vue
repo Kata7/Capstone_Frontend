@@ -14,19 +14,18 @@
 
 <script>
 export default {
-  data: function() {
+  data: function () {
     return {
       save: false
     }
   },
   methods: {
-    yeet: function (){
+    yeet: function () {
       console.log('yeeet')
     }
   }
 }
 </script>
-
 
 <style>
 #app {
