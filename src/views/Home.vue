@@ -1,7 +1,7 @@
 <template>
   <router-link to="/login">
     <div class="main">
-      <h1 class="title">FOODR</h1>
+      <h1 class="title">HUNGRii</h1>
     </div>
   </router-link>
 </template>

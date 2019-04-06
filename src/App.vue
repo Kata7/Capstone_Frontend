@@ -1,3 +1,4 @@
+
 <template>
   <div id='app'>
     <div id='nav' v-if='showNav'>
@@ -12,7 +13,10 @@
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue'
 export default {
+  components: {
+  },
   data: function () {
     return {
       showNav: false,
