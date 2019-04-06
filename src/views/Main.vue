@@ -28,7 +28,7 @@ export default {
   width: 100%;
   height: 100vh;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .title {

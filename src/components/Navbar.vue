@@ -4,7 +4,7 @@
       <router-link v-if="routerPathBack" v-bind:to="routerPathBack"><&nbsp;</router-link>
     </div>
     <div>
-      <p>{{title}}</p>
+      <h2>{{title}}</h2>
     </div>
     <div class="space">
       <router-link v-if="routerPathForward" v-bind:to="routerPathForward">&nbsp;></router-link>

@@ -1,6 +1,10 @@
 <template>
   <div class="main">
     <Navbar title="Settings" routerPathBack="/main" routerPathForward=""/>
+    <div class="setting-form">
+      <input>
+      <input>
+    </div>
   </div>
 </template>
 
@@ -18,11 +22,9 @@ export default {
   display: flex;
   flex-direction: column;
   background: #d00000;
-  /* border: 4px solid #FFFFFF; */
   width: 100%;
   height: 100vh;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .title {
