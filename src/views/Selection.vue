@@ -1,10 +1,26 @@
 <template>
   <div class="main">
-    <Navbar title="SELECTION" routerPathBack="/main" routerPathForward=""/>
+    <Navbar title="{Restaurant Name}" routerPathBack="/main" routerPathForward=""/>
     <div class="info-container">
-      <h2 class="title">{restaurant name}</h2>
+      <div class="info-col">
+        <p>Street: {street}</p>
+        <p>City: {city}</p>
+        <p>State: {state}</p>
+      </div>
       <div class="info-row">
-        <p>yeet</p>
+        <p>Contact</p>
+      </div>
+      <div class="info-col">
+        <p>Schedule</p>
+        <ul>
+          <li>Monday: {time}</li>
+          <li>Monday: {time}</li>
+          <li>Monday: {time}</li>
+          <li>Monday: {time}</li>
+          <li>Monday: {time}</li>
+          <li>Monday: {time}</li>
+          <li>Monday: {time}</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -26,7 +42,7 @@ export default {
   flex-direction: column;
   background: #d00000;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
 }
 
@@ -41,13 +57,32 @@ export default {
   display: flex;
   flex-direction: row;
   width: 80vw;
+  margin: 10px 10px 0px 10px;
+  padding: 5px;
+  border: 5px solid #FFBA08;
+}
+
+.info-col {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
   margin: 10px;
   padding: 5px;
-  border: 1px solid orange;
+  border: 5px solid #FFBA08;
+  align-content: left;
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  color: white;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .title {
@@ -68,6 +103,6 @@ button {
   height: 10vh;
   background: #D00000;
   color: #FFFFFF;
-  border: 5px solid orange;
+  border: 5px solid #FFBA08;
 }
 </style>

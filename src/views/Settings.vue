@@ -22,6 +22,10 @@
         <input id="cache" type="number" placeholder="# of results stored" min=1 max=10>
         <button>Cache Size</button>
       </div>
+      <div class="settings-row">
+        <div class="space"></div>
+        <button class="save">SUBMIT</button>
+      </div>
     </div>
   </div>
 </template>
@@ -63,6 +67,7 @@ export default {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .settings-row {
@@ -87,6 +92,14 @@ button {
   height: 10vh;
   background: #D00000;
   color: #FFFFFF;
-  border: 5px solid orange;
+  border: 5px solid #FFBA08;
+}
+
+.save:hover {
+  background: black;
+}
+
+.space {
+  width: 27.5vw;
 }
 </style>
