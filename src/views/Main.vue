@@ -49,7 +49,7 @@ a {
 .container img {
   max-width: 80%;
   padding: 10px;
-  border: 1px solid #ffba08
+  border: 1px solid #ffba08;
 }
 
 .btn-yes {

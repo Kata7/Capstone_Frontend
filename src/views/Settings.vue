@@ -15,12 +15,12 @@
         <button>State</button>
       </div>
       <div class="settings-row">
-        <input id="distance" type="number" placeholder="travel distance" min=1 max=10>
-        <button>Distance (mi.)</button>
+        <input id="distance" type="number" placeholder="travel distance (mi.)" min=1 max=10>
+        <button>Distance</button>
       </div>
       <div class="settings-row">
         <input id="cache" type="number" placeholder="# of results stored" min=1 max=10>
-        <button>Cache Size</button>
+        <button>Cache</button>
       </div>
       <div class="settings-row">
         <div class="space"></div>

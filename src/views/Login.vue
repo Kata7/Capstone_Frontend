@@ -54,4 +54,8 @@ export default {
   .login {
     height: 2rem;
   }
+
+  button:hover {
+    background: #000000;
+  }
 </style>

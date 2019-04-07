@@ -2,25 +2,67 @@
   <div class="main">
     <Navbar title="{Restaurant Name}" routerPathBack="/main" routerPathForward=""/>
     <div class="info-container">
-      <div class="info-col">
-        <p>Street: {street}</p>
-        <p>City: {city}</p>
-        <p>State: {state}</p>
+      <div class="info-row">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Mon_Ami_Boulangerie_%288119944759%29.jpg" />
       </div>
       <div class="info-row">
-        <p>Contact</p>
+        <h2 class="header">Address</h2>
+        <div class="info-sub-col">
+          <div class="sub-row">
+            <h3 class="subHeader">Street</h3>
+            <p>{address}</p>
+          </div>
+          <div class="sub-row bottom">
+            <h3 class="subHeader">City</h3>
+            <p>{city}, {state}</p>
+          </div>
+        </div>
       </div>
-      <div class="info-col">
-        <p>Schedule</p>
-        <ul>
-          <li>Monday: {time}</li>
-          <li>Monday: {time}</li>
-          <li>Monday: {time}</li>
-          <li>Monday: {time}</li>
-          <li>Monday: {time}</li>
-          <li>Monday: {time}</li>
-          <li>Monday: {time}</li>
-        </ul>
+      <div class="info-row">
+        <h2 class="header">Hours</h2>
+        <div class="info-sub-col">
+          <div class="sub-row">
+            <h3 class="subHeader">Mon</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+          <div class="sub-row">
+            <h3 class="subHeader">Tue</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+          <div class="sub-row">
+            <h3 class="subHeader">Wed</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+          <div class="sub-row">
+            <h3 class="subHeader">Thu</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+          <div class="sub-row">
+            <h3 class="subHeader">Fri</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+          <div class="sub-row">
+            <h3 class="subHeader">Sat</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+          <div class="sub-row bottom">
+            <h3 class="subHeader">Sun</h3>
+            <p>{XXXX-YYYY}</p>
+          </div>
+        </div>
+      </div>
+      <div class="info-row">
+        <h2 class="header">Contact</h2>
+        <div class="info-sub-col">
+          <div class="sub-row">
+            <h3 class="subHeader">Phone</h3>
+            <p>{(757) 555-3456}</p>
+          </div>
+          <div class="sub-row bottom">
+            <h3 class="subHeader">Web</h3>
+            <p>{url}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -51,58 +93,61 @@ export default {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
+  padding: 5px 0px 5px 0px;
 }
 
 .info-row {
   display: flex;
   flex-direction: row;
+  /* flex-flow: wrap; */
   width: 80vw;
-  margin: 10px 10px 0px 10px;
-  padding: 5px;
-  border: 5px solid #FFBA08;
+  border: 3px solid #ffba08;
+  margin-bottom: 5px;
 }
 
-.info-col {
+.header {
+  color: white;
+  text-align: center;
+  border-right: 3px solid #ffba08;
+  width: 25vw;
+}
+
+.subHeader {
+  color: white;
+  text-align: center;
+  width: 20vw;
+  border-right: 1px solid #ffba08;
+}
+
+.info-sub-col {
   display: flex;
   flex-direction: column;
-  width: 80vw;
-  margin: 10px;
-  padding: 5px;
-  border: 5px solid #FFBA08;
-  align-content: left;
+  width: 100%;
 }
 
-a {
-  text-decoration: none;
+.sub-row {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  border-bottom: 1px solid #ffba08;
+  width: 100%;
+}
+
+.bottom {
+  border-bottom: none;
 }
 
 p {
+  display: flex;
+  flex-direction: row;
   color: white;
-  text-align: left;
+  padding: 2px 2px 2px 10px;
 }
 
-ul {
-  list-style-type: none;
-}
-
-.title {
-  border: 5px solid #ffba08;
-  padding: 10px;
-  color: #ffffff;
-  font-size: 5vmin;
-  margin: 2vmin;
-}
-
-input {
-  height: 10vh;
-  width: 55vw;
-}
-
-button {
-  width: 25vw;
-  height: 10vh;
-  background: #D00000;
-  color: #FFFFFF;
-  border: 5px solid #FFBA08;
+img {
+  padding: 5px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 </style>
