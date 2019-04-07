@@ -32,7 +32,7 @@ export default {
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    font-size: 2rem;
+    font-size: 10vmin;
   }
 
   .space {

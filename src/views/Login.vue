@@ -39,7 +39,7 @@ export default {
 
   .form {
     display: inline;
-    margin: 10px;
+    margin: 5vmin;
   }
 
   .enter-btn {
@@ -47,8 +47,8 @@ export default {
     padding: 2px;
     margin: 0px 0px 0px 1px;
     color: #FFFFFF;
-    background: #000000;
-    border: 2px solid #FFBA08;
+    background: #D00000;
+    border: 5px solid #FFBA08;
   }
 
   .login {
