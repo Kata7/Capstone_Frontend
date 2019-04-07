@@ -16,7 +16,6 @@ export default {
     display: flex;
     flex-direction: row;
     background: #D00000;
-    /* border: 4px solid #FFFFFF; */
     width: 100%;
     height: 100vh;
     align-items: center;
@@ -25,10 +24,10 @@ export default {
 
   .title {
     display: flex;
-    border: 8px solid #FFBA08;
-    padding: 10px;
+    border: 2vmin solid #FFBA08;
+    padding: 3vmin;
     color: #FFFFFF;
-    font-size: 4rem;
+    font-size: 12vmin;
   }
 
   a {
