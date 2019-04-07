@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Navbar title="SETTINGS" routerPathBack="/main" routerPathForward/>
+    <Navbar title="SETTINGS" routerPathBack="/main" routerPathForward=""/>
     <div class="settings-form">
       <div class="settings-row">
         <input id="address" name="address" placeholder="street address" type="text">
@@ -56,14 +56,6 @@ export default {
   width: 100%;
   height: 100vh;
   align-items: center;
-}
-
-.title {
-  display: flex;
-  border: 8px solid #ffba08;
-  padding: 10px;
-  color: #ffffff;
-  font-size: 4rem;
 }
 
 .settings-form {
