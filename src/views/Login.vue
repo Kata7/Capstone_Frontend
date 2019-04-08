@@ -44,7 +44,7 @@ export default {
   .enter-btn {
     height: 12vmin;
     padding: 1vmin;
-    margin: 0px 0px 0px 1px;
+    margin-left: 1vmin;
     color: #FFFFFF;
     background: #D00000;
     border: 1.5vmin solid #FFBA08;

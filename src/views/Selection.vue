@@ -93,7 +93,7 @@ export default {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  padding: 5px 0px 5px 0px;
+  padding: 1vmin 0;
 }
 
 .info-row {
@@ -101,22 +101,22 @@ export default {
   flex-direction: row;
   /* flex-flow: wrap; */
   width: 80vw;
-  border: 3px solid #ffba08;
-  margin-bottom: 5px;
+  border: 1.5vmin solid #ffba08;
+  margin-bottom: 2vmin;
 }
 
 .header {
   color: white;
   text-align: center;
-  border-right: 3px solid #ffba08;
-  width: 25vw;
+  border-right: 1vmin solid #ffba08;
+  width: 30vw;
 }
 
 .subHeader {
   color: white;
   text-align: center;
   width: 20vw;
-  border-right: 1px solid #ffba08;
+  border-right: 0.5vmin solid #ffba08;
 }
 
 .info-sub-col {
@@ -129,7 +129,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-self: center;
-  border-bottom: 1px solid #ffba08;
+  border-bottom: 0.5vmin solid #ffba08;
   width: 100%;
 }
 
@@ -141,11 +141,11 @@ p {
   display: flex;
   flex-direction: row;
   color: white;
-  padding: 2px 2px 2px 10px;
+  padding: 1vmin 1vmin 1vmin 5vmin;
 }
 
 img {
-  padding: 5px;
+  padding: 2vmin;
   object-fit: contain;
   width: 100%;
   height: 100%;

@@ -58,7 +58,7 @@ export default {
   flex-direction: column;
   background: #d00000;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
 }
 
@@ -67,15 +67,13 @@ export default {
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 10px;
 }
 
 .settings-row {
   display: flex;
   flex-direction: row;
   width: 80vw;
-  margin: 10px;
-  padding: 5px;
+  margin: 1.5vmin;
 }
 
 a {
@@ -92,7 +90,7 @@ button {
   height: 10vh;
   background: #D00000;
   color: #FFFFFF;
-  border: 5px solid #FFBA08;
+  border: 1.5vmin solid #FFBA08;
 }
 
 .save:hover {
