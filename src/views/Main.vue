@@ -2,15 +2,10 @@
   <div class="main">
     <Navbar title="HUNGRii" routerPathBack="" routerPathForward="/settings"/>
     <div class="container">
-      <div class="row">
-        <button class="reject">No</button>
-        <div class="image-container">
-          <img
-          src="https://www.gannett-cdn.com/-mm-/1fecae5856e58374cc9e1c0fd6dcc3c6aae79d4e/c=0-293-5760-3547/local/-/media/2018/07/17/IAGroup/DesMoines/636674359927753055-0717-NEW-STATEFAIR-FOODS-00029.jpg?width=3200&height=1680&fit=crop">
-        </div>
-        <button class="keep">Yes</button>
-      </div>
-      <button class="select">Pick this one</button>
+      <button class="reject">X</button>
+      <img src="https://www.gannett-cdn.com/-mm-/1fecae5856e58374cc9e1c0fd6dcc3c6aae79d4e/c=0-293-5760-3547/local/-/media/2018/07/17/IAGroup/DesMoines/636674359927753055-0717-NEW-STATEFAIR-FOODS-00029.jpg?width=3200&height=1680&fit=crop">
+      <button class="keep">✔</button>
+      <!-- <button class="select">Pick this one</button> -->
     </div>
   </div>
 </template>
@@ -28,43 +23,59 @@ export default {
 .main {
   display: flex;
   flex-direction: column;
-  background: #d00000;
+  background: whitesmoke;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   align-items: center;
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  border: 1.5vmin solid orange;
+  height: 90vh;
   width: 100%;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .reject, .keep {
-  width: 20%;
+  width: 20vmin;
   z-index: 1;
-  background: none;
+  color: white;
+  font-size: 5vmin;
+  border-radius: 50%;
+  height: 16vmin;
+  width: 16vmin;
+  border: none;
 }
 
-.image-container {
-  height: 57vh;
-  width: 100%;
-  margin: 0 -20%
+.reject {
+  position: absolute;
+  top: 42%;
+  left: 10vw;
+  background: #D00000;
+  font-weight: 700;
+}
+
+.keep {
+  position: absolute;
+  top: 42%;
+  right: 10vw;
+  background: blue;
 }
 
 .select {
-  min-height: 20vh;
+  /* position: absolute; */
+  bottom: 0;
+  height: 10vmin;
+  width: 100%;
+  background: green;
+  opacity: 0.5;
+  border: none;
 }
 
 img {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }

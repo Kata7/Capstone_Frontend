@@ -4,7 +4,7 @@
       <router-link v-if="routerPathBack" v-bind:to="routerPathBack"><&nbsp;</router-link>
     </div>
     <div>
-      <h2>{{title}}</h2>
+      <h2 class="title">{{title}}</h2>
     </div>
     <div class="space right">
       <router-link v-if="routerPathForward" v-bind:to="routerPathForward">&nbsp;></router-link>
@@ -27,14 +27,20 @@ export default {
   .navbar {
     display: flex;
     flex-direction: row;
-    border: 2vmin solid #FFBA08;
+    border: none;
+    background: #D00000;
     color: #FFFFFF;
     width: 100%;
-    height: 18vmin;
+    height: 16vmin;
     align-items: center;
     justify-content: space-between;
     font-size: 12vmin;
-    margin-bottom: 2vmin;
+  }
+
+  .title {
+    color: #FFFFFF;
+    border: 1vmin solid orange;
+    padding: 1.2vmin;
   }
 
   .space {

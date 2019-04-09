@@ -3,7 +3,8 @@
     <h1 class="title">LOGIN</h1>
     <div class="form">
       <input class="login" placeholder="email" type="text">
-      <button class="enter-btn">ENTER</button>
+      <input class="login" placeholder="password" type="password">
+      <router-link to="/settings"><button class="enter-btn">ENTER</button></router-link>
     </div>
   </div>
 </template>
@@ -17,7 +18,7 @@ export default {
   .main {
     display: flex;
     flex-direction: column;
-    background: #D00000;
+    background: whitesmoke;
     width: 100%;
     height: 100vh;
     align-items: center;
@@ -26,9 +27,10 @@ export default {
 
   .title {
     display: flex;
-    border: 2vmin solid #FFBA08;
+    /* border: 2vmin solid #FFBA08; */
+    background: #D00000;
     padding: 3vmin;
-    color: #FFFFFF;
+    color: #FFF;
     font-size: 12vmin;
   }
 
@@ -37,21 +39,27 @@ export default {
   }
 
   .form {
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 5vmin;
   }
 
   .enter-btn {
     height: 12vmin;
     padding: 1vmin;
-    margin-left: 1vmin;
+    margin-top: 2vmin;
+    font-weight: 700;
     color: #FFFFFF;
     background: #D00000;
-    border: 1.5vmin solid #FFBA08;
+    /* border: 1.5vmin solid #FFBA08; */
+    border: none;
   }
 
   .login {
     height: 12vmin;
+    width: 60vw;
+    margin: 2vmin;
   }
 
   button:hover {

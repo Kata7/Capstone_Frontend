@@ -82,7 +82,7 @@ export default {
 .main {
   display: flex;
   flex-direction: column;
-  background: #d00000;
+  background: whitesmoke;
   width: 100%;
   min-height: 100vh;
   align-items: center;
@@ -101,22 +101,22 @@ export default {
   flex-direction: row;
   /* flex-flow: wrap; */
   width: 80vw;
-  border: 1.5vmin solid #ffba08;
+  /* border: 1.5vmin solid #ffba08; */
   margin-bottom: 2vmin;
 }
 
 .header {
-  color: white;
+  color: #000;
   text-align: center;
-  border-right: 1vmin solid #ffba08;
+  /* border-right: 1vmin solid #ffba08; */
   width: 30vw;
 }
 
 .subHeader {
-  color: white;
+  color: #000;
   text-align: center;
   width: 20vw;
-  border-right: 0.5vmin solid #ffba08;
+  /* border-right: 0.5vmin solid #ffba08; */
 }
 
 .info-sub-col {
@@ -129,7 +129,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-self: center;
-  border-bottom: 0.5vmin solid #ffba08;
+  /* border-bottom: 0.5vmin solid #ffba08; */
   width: 100%;
 }
 
@@ -140,7 +140,7 @@ export default {
 p {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #000;
   padding: 1vmin 1vmin 1vmin 5vmin;
 }
 

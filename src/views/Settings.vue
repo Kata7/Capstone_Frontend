@@ -24,7 +24,7 @@
       </div>
       <div class="settings-row">
         <div class="space"></div>
-        <button class="save">SUBMIT</button>
+        <router-link to="/main"><button class="save" v-on:click="$emit('yeet')">SUBMIT</button></router-link>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@ export default {
 .main {
   display: flex;
   flex-direction: column;
-  background: #d00000;
+  background: whitesmoke;
   width: 100%;
   min-height: 100vh;
   align-items: center;
@@ -90,7 +90,8 @@ button {
   height: 10vh;
   background: #D00000;
   color: #FFFFFF;
-  border: 1.5vmin solid #FFBA08;
+  /* border: 1.5vmin solid #000000; */
+  border: none;
 }
 
 .save:hover {
