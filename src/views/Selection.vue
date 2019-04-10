@@ -140,7 +140,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 80%;
-
+  margin: 0 0 2vw 0;
 }
 
 .info-row {
