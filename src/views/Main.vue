@@ -5,7 +5,7 @@
       <button class="reject">X</button>
       <img src="https://www.gannett-cdn.com/-mm-/1fecae5856e58374cc9e1c0fd6dcc3c6aae79d4e/c=0-293-5760-3547/local/-/media/2018/07/17/IAGroup/DesMoines/636674359927753055-0717-NEW-STATEFAIR-FOODS-00029.jpg?width=3200&height=1680&fit=crop">
       <button class="keep">✔</button>
-      <!-- <button class="select">Pick this one</button> -->
+      <router-link to='/selection'><button class="select">Yum!</button></router-link>
     </div>
   </div>
 </template>
@@ -47,11 +47,14 @@ export default {
   height: 16vmin;
   width: 16vmin;
   border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
 }
 
 .reject {
   position: absolute;
-  top: 42%;
   left: 10vw;
   background: #D00000;
   font-weight: 700;
@@ -59,18 +62,22 @@ export default {
 
 .keep {
   position: absolute;
-  top: 42%;
   right: 10vw;
   background: blue;
 }
 
 .select {
-  /* position: absolute; */
-  bottom: 0;
-  height: 10vmin;
-  width: 100%;
+  position: absolute;
+  bottom: 08%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 16vmin;
+  width: 32vmin;
   background: green;
-  opacity: 0.5;
+  color: #FFFFFF;
+  border-radius: 10%;
   border: none;
 }
 
