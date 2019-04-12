@@ -2,10 +2,11 @@
   <div class="main">
     <Navbar title="HUNGRii" routerPathBack="" routerPathForward="/settings"/>
     <div class="container">
-      <button class="reject">X</button>
-      <img src="https://www.gannett-cdn.com/-mm-/1fecae5856e58374cc9e1c0fd6dcc3c6aae79d4e/c=0-293-5760-3547/local/-/media/2018/07/17/IAGroup/DesMoines/636674359927753055-0717-NEW-STATEFAIR-FOODS-00029.jpg?width=3200&height=1680&fit=crop">
-      <button class="keep">✔</button>
-      <router-link to='/selection'><button class="select">Yum!</button></router-link>
+      <button v-if="!$attrs.last" v-on:click="$emit('remove', $attrs.current.id)" class="reject">X</button>
+      <img v-on:click="nextImg" v-bind:src="$attrs.current.images[this._data.count]"
+      >
+      <button v-if="!$attrs.last" v-on:click="$emit('next')" class="keep">✔</button>
+      <router-link to='/selection'><button v-if="$attrs.last" class="select">Info</button></router-link>
     </div>
   </div>
 </template>
@@ -15,6 +16,19 @@ import Navbar from '../components/Navbar.vue'
 export default {
   components: {
     Navbar
+  },
+  data: function() {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    nextImg: function() {
+      this._data.count++
+      if (this._data.count > this.$attrs.current.images.length - 1) {
+        this._data.count = 0
+      }
+    }
   }
 }
 </script>

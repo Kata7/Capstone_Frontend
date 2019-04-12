@@ -18,17 +18,20 @@ export default new Router({
     {
       path: '/main',
       name: 'main',
-      component: () => import('./views/Main.vue')
+      component: () => import('./views/Main.vue'),
+      props: true
     },
     {
       path: '/selection',
       name: 'selection',
-      component: () => import('./views/Selection.vue')
+      component: () => import('./views/Selection.vue'),
+      props: {default: true, current: {}}
     },
     {
       path: '/settings',
       name: 'settings',
-      component: () => import('./views/Settings.vue')
+      component: () => import('./views/Settings.vue'),
+      props: true
     }
   ]
 })

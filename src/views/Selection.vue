@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <Navbar title="{Restaurant Name}" routerPathBack="/main" routerPathForward/>
+    <Navbar v-bind:title="$attrs.current.name" routerPathBack="/main" routerPathForward/>
     <div class="info-container">
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Mon_Ami_Boulangerie_%288119944759%29.jpg"
+          v-bind:src="$attrs.current.image"
         >
       </div>
       <div class="info-col">
@@ -14,7 +14,7 @@
             <h3>Street</h3>
           </div>
           <div class="content">
-            <p>{street}</p>
+            <p>{{$attrs.current.address}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -22,7 +22,7 @@
             <h3>City, State</h3>
           </div>
           <div class="content">
-            <p>{city, state}</p>
+            <p>{{$attrs.current.city}}, {{$attrs.current.state}}</p>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
             <h3>Phone</h3>
           </div>
           <div class="content">
-            <p>{phone_number}</p>
+            <p>{{$attrs.current.phone_number}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -41,7 +41,7 @@
             <h3>Website</h3>
           </div>
           <div class="content">
-            <p>{url}</p>
+            <p>{{$attrs.current.url}}</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
             <h3>Mon</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.monday}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -60,7 +60,7 @@
             <h3>Tue</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.tuesday}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -68,7 +68,7 @@
             <h3>Wed</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.wednesday}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -76,7 +76,7 @@
             <h3>Thu</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.thursday}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -84,7 +84,7 @@
             <h3>Fri</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.friday}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -92,7 +92,7 @@
             <h3>Sat</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.saturday}}</p>
           </div>
         </div>
         <div class="info-row">
@@ -100,7 +100,7 @@
             <h3>Sun</h3>
           </div>
           <div class="content">
-            <p>{0000-0000}</p>
+            <p>{{$attrs.current.sunday}}</p>
           </div>
         </div>
       </div>
@@ -114,6 +114,9 @@ import Navbar from "../components/Navbar.vue";
 export default {
   components: {
     Navbar
+  },
+  props: {
+    current: Object
   }
 };
 </script>

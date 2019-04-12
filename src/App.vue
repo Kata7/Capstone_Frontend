@@ -8,7 +8,12 @@
       <router-link to="/selection">Final Selection</router-link>|
       <router-link to="/settings">Settings</router-link>
     </div>
-    <router-view/>
+    <router-view 
+    v-bind:current="results.restaurants[curIndex]"
+    v-bind:last="last"
+    v-on:remove="removeRes($event)"
+    v-on:next="nextRes"
+    />
   </div>
 </template>
 
@@ -322,15 +327,34 @@ export default {
             ]
           }
         ]
-      }
+      },
+      curIndex: 0,
+      last: Boolean
     };
   },
   methods: {
-    yeet: function() {
-      console.log("yeeet");
+    nextRes() {
+      this.curIndex++
+      if (this.curIndex > this.results.restaurants.length - 1) {
+        this.curIndex = 0
+      }
+    },
+    removeRes(id) {
+      let restaurants = this.results.restaurants
+      let removedArr = restaurants.filter(restaurant => restaurant.id !== id)
+      this.results.restaurants = removedArr
+      console.log(removedArr.length)
+      if (removedArr.length === 1) {
+        console.log('yeet')
+        this.last = true
+      }
+      this.nextRes()
     }
+  },
+  mounted: function() {
+    this.last = false
   }
-};
+}
 </script>
 
 <style>
