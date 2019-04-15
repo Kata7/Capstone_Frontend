@@ -2,8 +2,8 @@
   <div class="main">
     <h1 class="title">LOGIN</h1>
     <div class="form">
-      <input class="login" placeholder="email" type="text">
-      <input class="login" placeholder="password" type="password">
+      <input class="login" placeholder="email" type="text" value="a.moran3257@gmail.com">
+      <input class="login" placeholder="password" type="password" value="swagyeet">
       <router-link to="/settings"><button class="enter-btn">ENTER</button></router-link>
     </div>
   </div>

@@ -3,23 +3,23 @@
     <Navbar title="SETTINGS" routerPathBack="/main" routerPathForward=""/>
     <div class="settings-form">
       <div class="settings-row">
-        <input id="address" name="address" placeholder="street address" type="text">
+        <input id="address" name="address" placeholder="street address" type="text" value="1644 Platte St.">
         <button>Street</button>
       </div>
       <div class="settings-row">
-        <input id="city" name="city" placeholder="city" type="text">
+        <input id="city" name="city" placeholder="city" type="text" value="Denver">
         <button>City</button>
       </div>
       <div class="settings-row">
-        <input id="state" name="state" placeholder="state" type="text">
+        <input id="state" name="state" placeholder="state" type="text" value="Colorado">
         <button>State</button>
       </div>
       <div class="settings-row">
-        <input id="distance" type="number" placeholder="travel distance (mi.)" min=1 max=10>
+        <input id="distance" type="number" placeholder="travel distance (mi.)" min=1 max=10 value="15">
         <button>Distance</button>
       </div>
       <div class="settings-row">
-        <input id="cache" type="number" placeholder="# of results stored" min=1 max=10>
+        <input id="cache" type="number" placeholder="# of results stored" min=1 max=10 value="10">
         <button>Cache</button>
       </div>
       <div class="settings-row">
