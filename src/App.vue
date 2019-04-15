@@ -139,11 +139,11 @@ export default {
             image:
               "https://izakayaden.net/wp-content/uploads/2018/12/location.jpg",
             images: [
-              "https://media-cdn.tripadvisor.com/media/photo-s/0f/9a/7c/17/very-filling-steak-and.jpg",
               "http://www.ironchefsteakhouse.com/img/carousel/Food3-A%20Sign.jpg",
               "https://s3-media3.fl.yelpcdn.com/bphoto/j97nNxDOEsBmvsTcOJcreA/348s.jpg",
               "https://ot-foodspotting-production.s3.amazonaws.com/reviews/4655589/thumb_600.jpg",
               "https://media-cdn.tripadvisor.com/media/photo-s/08/66/6f/2a/koto-japanese-steakhouse.jpg",
+              "https://media-cdn.tripadvisor.com/media/photo-s/0f/9a/7c/17/very-filling-steak-and.jpg",
             ]
           },
           {
@@ -229,11 +229,11 @@ export default {
             image:
               "https://www.sushiden.net/wp-content/uploads/2017/04/exterior.jpg",
             images: [
-              "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2Frecipes%2Ffw%2F13%2Fkorean-sushi-rolls-fw-x.jpg%3Fitok%3DcNmNOLCS&w=450&c=sc&poi=face&q=85",
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKU8A2GTJzkIVa-8dxhG9Pxqwj8yrVrwZ2eUfNKutjl6gVoJA6",
               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/1200px-Sushi_platter.jpg",
               "https://img.grouponcdn.com/bynder/Ri5HEhJFF4o6PFz5WCG2rrSNN4A/Ri-2048x1229/v1/c700x420.jpg",
               "https://assets3.thrillist.com/v1/image/1559020/size/tmg-slideshow_l.jpg",
+              "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2Frecipes%2Ffw%2F13%2Fkorean-sushi-rolls-fw-x.jpg%3Fitok%3DcNmNOLCS&w=450&c=sc&poi=face&q=85",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKU8A2GTJzkIVa-8dxhG9Pxqwj8yrVrwZ2eUfNKutjl6gVoJA6",
             ]
           },
           {
@@ -342,13 +342,16 @@ export default {
     removeRes(id) {
       let restaurants = this.results.restaurants
       let removedArr = restaurants.filter(restaurant => restaurant.id !== id)
+       if (this.curIndex === removedArr.length) {
+        this.curIndex = 0
+      }
       this.results.restaurants = removedArr
       console.log(removedArr.length)
       if (removedArr.length === 1) {
         console.log('yeet')
         this.last = true
       }
-      this.nextRes()
+      // this.nextRes()
     }
   },
   mounted: function() {

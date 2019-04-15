@@ -2,10 +2,10 @@
   <div class="main">
     <Navbar title="HUNGRii" routerPathBack="" routerPathForward="/settings"/>
     <div class="container">
-      <button v-if="!$attrs.last" v-on:click="$emit('remove', $attrs.current.id)" class="reject">X</button>
+      <button v-if="!$attrs.last" v-on:click="$emit('remove', $attrs.current.id), reset()" class="reject">X</button>
       <img v-on:click="nextImg" v-bind:src="$attrs.current.images[this._data.count]"
       >
-      <button v-if="!$attrs.last" v-on:click="$emit('next')" class="keep">✔</button>
+      <button v-if="!$attrs.last" v-on:click="$emit('next'), reset()" class="keep">✔</button>
       <router-link to='/selection'><button v-if="$attrs.last" class="select">Info</button></router-link>
     </div>
   </div>
@@ -28,6 +28,10 @@ export default {
       if (this._data.count > this.$attrs.current.images.length - 1) {
         this._data.count = 0
       }
+    },
+    reset: function() {
+      console.log('yeet')
+      this._data.count = 0
     }
   }
 }
